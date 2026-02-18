@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --base-color: #6070ff;
+    --light-base-color: #ebebff;
+    --base-text-color: #344563;
+    --heading-text-color: #172b4d;
+    --border-line-color: #dfe1e6;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    height: 4rem;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+header span {
+    color: var(--base-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: var(--base-text-color);
+    font-weight: 500;
+}
+
+/* hero section */
+.hero {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border-line-color);
+    color: var(--base-text-color);
+    font-weight: 400;
+}
+
+.hero-title {
+    font-size: 40px;
+    margin: 60px 0px 0px;
+    color: var(--heading-text-color);
+}
+
+.description {
+    text-align: center;
+    font-size: 17.6px;
+    width: 70%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.view-work,
+.in-touch {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.view-work {
+    background-color: var(--base-color);
+    color: #ffffff;
+    outline: none;
+    border: none;
+}
+
+.in-touch {
+    border: 2px solid var(--base-color);
+    color: var(--base-color);
+    background-color: white;
+}
+
+.social-logos {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.social-logos li {
+    background-color: var(--light-base-color);
+    padding: 0.5rem;
+    border-radius: 50px;
+    align-items: center;
+}
+
+/* Projects section */
+.project-section {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--base-text-color);
+}
+
+.project-section-title {
+    text-align: center;
+}
+
+.all-projects {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 12px;
+    border: 1px solid var(--border-line-color);
+    border-radius: 6px;
+    width: 360px;
+    height: 400px;
+}
+
+.tools button {
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+}
