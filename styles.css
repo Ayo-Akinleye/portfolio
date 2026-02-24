@@ -69,10 +69,12 @@ header {
     background-color: #ffffff;
 }
 
-header span {
+.logo-joy {
     color: var(--base-color);
     font-size: 1.5rem;
     font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -85,8 +87,23 @@ header span {
     font-weight: 500;
 }
 
+.nav-links li {
+    cursor: pointer;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--base-text-color);
+}
+
+.nav-links li a:hover,
+.nav-links li a:active {
+    color: var(--base-color);
+}
+
+
 /* hero section */
-.hero {
+#hero-section {
     background-color: var(--base-color2);
     padding: 4rem 2rem;
     align-items: center;
@@ -98,7 +115,7 @@ header span {
     font-weight: 400;
 }
 
-.hero-title {
+#hero-title {
     font-size: 40px;
     margin: 60px 0px 0px;
 }
@@ -122,6 +139,7 @@ header span {
     font-weight: 600;
     cursor: pointer;
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
 }
 
 .view-work {
@@ -137,6 +155,16 @@ header span {
     background-color: white;
 }
 
+.view-work:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(96, 112, 255, 0.3);
+}
+
+.in-touch:hover {
+    background-color: var(--base-color);
+    color: white;
+}
+
 .social-logos {
     display: flex;
     gap: 0.6rem;
@@ -147,10 +175,26 @@ header span {
     padding: 0.5rem;
     border-radius: 50px;
     align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social-logos li i {
+    color: var(--base-color);
+    font-size: 22px;
+}
+
+.social-logos li:hover {
+    transform: translateX(3px);
+    background-color: var(--base-color);
+}
+
+.social-logos li i:hover {
+    color: white;
+
 }
 
 /* Projects section */
-.project-section {
+#project-section {
     margin-bottom: 2rem;
     gap: 2rem;
     color: var(--base-text-color);
@@ -177,7 +221,7 @@ header span {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border: 1px solid var(--base-color);
+    border: 2px solid var(--base-color);
     box-shadow: 0px 8px 16px rgba(96, 112, 255, 0.1);
 }
 
@@ -193,7 +237,7 @@ header span {
 }
 
 /* About me section */
-.about-me-section {
+#about-me-section {
     background-color: var(--base-color2);
     justify-content: center;
     align-items: center;
@@ -286,7 +330,7 @@ header span {
 }
 
 /* Education Section */
-.education-section {
+#education-section {
     gap: 2rem;
     justify-content: center;
 }
@@ -308,7 +352,7 @@ header span {
 }
 
 /* Contact Section  */
-.contact-section {
+#contact-section {
     background-color: var(--base-color);
     gap: 2rem;
     justify-content: center;
@@ -317,7 +361,7 @@ header span {
 }
 
 .contact-section-title,
-.contact-section p {
+#contact-section p {
     color: white;
 }
 
@@ -353,7 +397,7 @@ textarea {
     resize: vertical;
 }
 
-.contact-section button {
+#contact-section button {
     padding: 1rem 0;
     background-color: var(--light-base-color);
     color: var(--base-color);
@@ -366,10 +410,10 @@ textarea {
     transition: all 0.3s ease;
 }
 
-.contact-section button:hover,
-.contact-section button:active {
+#contact-section button:hover,
+#contact-section button:active {
     background-color: var(--heading-text-color);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     color: white;
     box-shadow: 0 4px 12px rgba(96, 112, 255, 0.3);
 }
@@ -391,4 +435,8 @@ footer p {
 
 footer .social-logos li {
     background-color: var(--heading-text-color);
+}
+
+footer .social-logos li i {
+    font-size: 20px;
 }

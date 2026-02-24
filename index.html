@@ -14,19 +14,19 @@
 <body>
     <!-- Header -->
     <header>
-        <span class="logo">Joy-In-Tech</span>
+        <a href="#hero-section" class="logo-joy">Joy-In-Tech</a>
         <nav>
             <ul class="nav-links">
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a href="#project-section">Portfolio</a></li>
+                <li><a href="#about-me-section">About</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="hero-title">Frontend Developer</h1>
+    <section id="hero-section">
+        <h1 id="hero-title">Frontend Developer</h1>
         <p class="description">Entry-level Frontend Developer passionate about bringing ideas to life through responsive
             user-friendly web applications.</p>
         <!-- <p class="description">I help individuals, brands, and small businesses bring their ideas online by building
@@ -34,40 +34,40 @@
             websites with React, Tailwind CSS, and other powerful tools.
         </p> -->
         <div class="hero-buttons">
-            <button class="view-work">View My Work</button>
-            <button class="in-touch">Get In Touch</button>
+            <button class="view-work" onclick="window.location.href='#project-section'">View My Work</button>
+            <button class="in-touch" onclick="window.location.href='#contact-section' ">Get In Touch</button>
         </div>
 
         <ul class="social-logos">
             <li>
                 <a href="https://github.com/Ayo-Akinleye" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" style="color: var(--base-color); font-size: 22px;"></i>
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </li>
 
             <li>
                 <a href="https://www.instagram.com/joy_in_tech/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram" style="color: var(--base-color); font-size: 22px;"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
             </li>
 
             <li>
                 <a href="https://www.linkedin.com/in/ayomide-akinleye-developer" target="_blank"
                     rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin" style="color: var(--base-color); font-size: 22px;"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
             </li>
 
             <li>
                 <a href="https://x.com/MidejoyAkinleye" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-x-twitter" style="color: var(--base-color); font-size: 22px;"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                 </a>
             </li>
         </ul>
     </section>
 
     <!-- Projects Section -->
-    <section class="project-section">
+    <section id="project-section">
         <h1 class="project-section-title">Featured Projects</h1>
         <div class="all-projects">
             <div class="project-card">
@@ -159,7 +159,7 @@
     </section>
 
     <!-- About me -->
-    <section class="about-me-section">
+    <section id="about-me-section">
         <h1>About me</h1>
         <div class="all-about">
             <div class="main-about">
@@ -220,7 +220,7 @@
     </section>
 
     <!-- Education section -->
-    <section class="education-section">
+    <section id="education-section">
         <h1>Education & Achievements</h1>
         <div class="education-flex">
             <div class="edu-card">
@@ -247,14 +247,15 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact-section">
+    <section id="contact-section">
         <h1 class="contact-section-title">Get in Touch</h1>
         <p>Have a project in mind or want to discuss opportunities? Contact me through the form below.</p>
-        <form action="">
-            <input type="text" name="fullname" id="fullname" placeholder="Your Fullname">
-            <input type="email" name="email" id="emailAddress" placeholder="Your Email">
-            <textarea name="message" placeholder="Your Message.."></textarea>
-            <Button>Send Message</Button>
+
+        <form id="contact-form" action="https://formspree.io/f/xlgwaeqr" method="POST">
+            <input type="text" name="fullname" id="fullname" placeholder="Your Fullname" required>
+            <input type="email" name="email" id="emailAddress" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message.." required></textarea>
+            <Button type="submit">Send Message</Button>
         </form>
         <p><i class="fa-solid fa-envelope"></i> joyintech50@gmail.com</p>
         <p><i class="fa-solid fa-location-dot"></i> Oyo State, Nigeria</p>
@@ -266,30 +267,31 @@
         <ul class="social-logos">
             <li>
                 <a href="https://github.com/Ayo-Akinleye" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" style="color: var(--base-color); font-size: 20px;"></i>
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </li>
 
             <li>
                 <a href="https://www.instagram.com/joy_in_tech/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram" style="color: var(--base-color); font-size: 20px;"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
             </li>
 
             <li>
                 <a href="https://www.linkedin.com/in/ayomide-akinleye-developer" target="_blank"
                     rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin" style="color: var(--base-color); font-size: 20px;"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
             </li>
 
             <li>
                 <a href="https://x.com/MidejoyAkinleye" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-x-twitter" style="color: var(--base-color); font-size: 20px;"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
                 </a>
             </li>
         </ul>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
