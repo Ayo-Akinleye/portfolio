@@ -166,17 +166,30 @@ header span {
 .project-card {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    padding: 12px;
+    gap: 0.8rem;
+    padding: 1rem;
     border: 1px solid var(--border-line-color);
-    border-radius: 6px;
+    border-radius: 12px;
     width: 360px;
     height: 350px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--base-color);
+    box-shadow: 0px 8px 16px rgba(96, 112, 255, 0.1);
 }
 
 .tools button {
-    padding: 0.2rem;
+    padding: 0.35rem 0.6rem;
     margin-left: 0.5rem;
+    background-color: var(--light-base-color);
+    color: var(--base-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* About me section */
@@ -205,6 +218,8 @@ header span {
 .summary {
     line-height: 1.8;
     font-size: 17.6px;
+    width: 540px;
+    /* margin-right: 1.5rem; */
 }
 
 .technologies {
@@ -286,6 +301,7 @@ header span {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
+    width: 545px;
     background-color: var(--base-color2);
     border: 1px solid var(--border-line-color);
     border-radius: 12px;
@@ -358,6 +374,7 @@ textarea {
     box-shadow: 0 4px 12px rgba(96, 112, 255, 0.3);
 }
 
+/* Footer */
 footer {
     padding: 2rem 3rem;
     background-color: var(--heading-text-color);
@@ -370,7 +387,6 @@ footer {
 
 footer p {
     color: white;
-
 }
 
 footer .social-logos li {
