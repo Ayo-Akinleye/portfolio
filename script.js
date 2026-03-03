@@ -20,5 +20,5 @@ contactForm.addEventListener('submit', clearForm)
 const clearForm = () => {
     setTimeout(() => {
         contactForm.reset();
-    }, 500);
+    });
 }
