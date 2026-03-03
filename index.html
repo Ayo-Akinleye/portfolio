@@ -15,19 +15,39 @@
     <!-- Header -->
     <header>
         <a href="#hero-section" class="logo-joy">Joy-In-Tech</a>
+
         <nav>
             <ul class="nav-links">
                 <li><a href="#project-section">Portfolio</a></li>
                 <li><a href="#about-me-section">About</a></li>
                 <li><a href="#contact-section">Contact</a></li>
             </ul>
+
+            <!-- mobile menu -->
+            <div class="menu-button" onclick=showMenu()>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="menu-links">
+                <li><a href="#project-section">Portfolio</a></li>
+                <li><a href="#about-me-section">About</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li onclick=closeMenu()>
+                    <a href="">
+                        <i class="fa-solid fa-x"></i>
+                        CLOSE
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
+
 
     <!-- Hero Section -->
     <section id="hero-section">
         <h1 id="hero-title">Frontend Developer</h1>
-        <p class="description">Entry-level Frontend Developer passionate about bringing ideas to life through responsive
+        <p class="description">Entry-level Frontend Developer passionate about bringing ideas to life through
+            responsive
             user-friendly web applications.</p>
         <!-- <p class="description">I help individuals, brands, and small businesses bring their ideas online by building
             modern, user-friendly
@@ -70,87 +90,85 @@
     <section id="project-section">
         <h1 class="project-section-title">Featured Projects</h1>
         <div class="all-projects">
+            <!-- SkyPeek -->
             <div class="project-card">
-                <h2>Project name</h2>
-                <h5>project location</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit, laudantium officia quia
-                    maiores harum cupiditate nisi quae quam a officiis, nam molestiae labore! Corporis expedita hic
-                    velit
-                    commodi explicabo a aperiam aliquid ad aliquam ipsam! Excepturi atque repellendus in.</p>
+                <h2>SkyPeek</h2>
+                <p>A simple and responsive weather application built with React that fetches real-time weather data
+                    using the OpenWeather API. It allows users to search for any city and view current weather
+                    conditions, including temperature, humidity, and wind speed.</p>
                 <div class="tools">
-                    <button>HTML</button>
-                    <button>CSS</button>
-                    <button>JavaScript</button>
+                    <button>ReactJs</button>
+                    <button>Tailwind CSS</button>
+                    <button>API</button>
+                </div>
+
+                <div class="project-link">
+                    <a href="https://sky-peek.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        View
+                        <i class="fa-solid fa-link"></i>
+                    </a>
+
+                    <a href="https://github.com/Ayo-Akinleye/codveda_level2_task2" target="_blank"
+                        rel="noopener noreferrer" class="github-link">
+                        Codebase
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- SimpToDO -->
+            <div class="project-card">
+                <h2>SimpToDO</h2>
+                <p>A desktop-based To-Do application built with React that allows users to add, edit, and delete
+                    tasks
+                    while storing data in localStorage. The project showcases key React
+                    fundamentals, including state management, event handling, conditional rendering, and real-time
+                    UI
+                    updates.</p>
+                <div class="tools">
+                    <button>ReactJs</button>
+                    <button>Tailwind CSS</button>
+                </div>
+
+                <div class="project-link">
+                    <a href="https://simpltaskboard.netlify.app/" target="_blank" rel="noopener noreferrer"
+                        class="link">
+                        View
+                        <i class="fa-solid fa-link"></i>
+                    </a>
+
+                    <a href="https://github.com/Ayo-Akinleye/simpletaskboard" target="_blank" rel="noopener noreferrer"
+                        class="github-link">
+                        Codebase
+                        <i class="fa-solid fa-code"></i>
+                    </a>
                 </div>
             </div>
 
+            <!-- ChuksKitchen -->
             <div class="project-card">
-                <h2>Project name</h2>
-                <h5>project location</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit, laudantium officia quia
-                    maiores harum cupiditate nisi quae quam a officiis, nam molestiae labore! Corporis expedita hic
-                    velit
-                    commodi explicabo a aperiam aliquid ad aliquam ipsam! Excepturi atque repellendus in.</p>
+                <h2>ChuksKitchen</h2>
+                <p>A Food Ordering and Customer Management System that allows users to register, browse available
+                    meals,
+                    place orders, and track their activity online. The application was developed by translating a
+                    provided Figma UI design into a functional and responsive frontend interface.</p>
                 <div class="tools">
-                    <button>HTML</button>
-                    <button>CSS</button>
-                    <button>JavaScript</button>
+                    <button>ReactJs</button>
+                    <button>Tailwind CSS</button>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <h2>Project name</h2>
-                <h5>project location</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit, laudantium officia quia
-                    maiores harum cupiditate nisi quae quam a officiis, nam molestiae labore! Corporis expedita hic
-                    velit
-                    commodi explicabo a aperiam aliquid ad aliquam ipsam! Excepturi atque repellendus in.</p>
-                <div class="tools">
-                    <button>HTML</button>
-                    <button>CSS</button>
-                    <button>JavaScript</button>
-                </div>
-            </div>
+                <div class="project-link">
+                    <a href="https://joy-chuks-kitchen.netlify.app/" target="_blank" rel="noopener noreferrer">
+                        View
+                        <i class="fa-solid fa-link"></i>
+                    </a>
 
-            <div class="project-card">
-                <h2>Project name</h2>
-                <h5>project location</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit, laudantium officia quia
-                    maiores harum cupiditate nisi quae quam a officiis, nam molestiae labore! Corporis expedita hic
-                    velit
-                    commodi explicabo a aperiam aliquid ad aliquam ipsam! Excepturi atque repellendus in.</p>
-                <div class="tools">
-                    <button>HTML</button>
-                    <button>CSS</button>
-                    <button>JavaScript</button>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h2>Project name</h2>
-                <h5>project location</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit, laudantium officia quia
-                    maiores harum cupiditate nisi quae quam a officiis, nam molestiae labore! Corporis expedita hic
-                    velit
-                    commodi explicabo a aperiam aliquid ad aliquam ipsam! Excepturi atque repellendus in.</p>
-                <div class="tools">
-                    <button>HTML</button>
-                    <button>CSS</button>
-                    <button>JavaScript</button>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h2>Project name</h2>
-                <h5>project location</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus fugit, laudantium officia quia
-                    maiores harum cupiditate nisi quae quam a officiis, nam molestiae labore! Corporis expedita hic
-                    velit
-                    commodi explicabo a aperiam aliquid ad aliquam ipsam! Excepturi atque repellendus in.</p>
-                <div class="tools">
-                    <button>HTML</button>
-                    <button>CSS</button>
-                    <button>JavaScript</button>
+                    <a href="https://github.com/Ayo-Akinleye/chuksKitchen" target="_blank" rel="noopener noreferrer"
+                        class="github-link">
+                        Codebase
+                        <i class="fa-solid fa-code"></i>
+                    </a>
                 </div>
             </div>
 
@@ -163,7 +181,8 @@
         <h1>About me</h1>
         <div class="all-about">
             <div class="main-about">
-                <p class="summary">Front-end Developer with practical experience translating Figma designs into fully
+                <p class="summary">Front-end Developer with practical experience translating Figma designs into
+                    fully
                     functional websites. Skilled in JavaScript, React, and modern styling techniques, delivering
                     interactive interfaces and seamless user experiences.
                 </p>
@@ -197,7 +216,8 @@
                             functional website.</li>
                         <li>Implemented structured layouts and reusable components, ensuring scalability and
                             maintainability of the codebase.</li>
-                        <li>Applied responsive design principles and modern CSS techniques to optimize user experience
+                        <li>Applied responsive design principles and modern CSS techniques to optimize user
+                            experience
                             across devices.</li>
                     </ul>
                 </div>
@@ -209,7 +229,8 @@
                     <ul>
                         <li>Mastered React Router for seamless page navigation in single-page applications</li>
                         <li>Integrated the OpenWeather API to fetch and display real-time data in a weather app</li>
-                        <li>Created advanced animations using GSAP, including scroll-based effects and interactive hover
+                        <li>Created advanced animations using GSAP, including scroll-based effects and interactive
+                            hover
                             animations</li>
                         <li>Optimized application performance using Google Lighthouse, improving load times and
                             interactivity metrics</li>
@@ -227,7 +248,8 @@
                 <h3>Glovo Women In Tech Bootcamp</h3>
                 <h4>SheCode Africa</h4>
                 <h5>November 2024 - February 2025</h5>
-                <p>12 weeks of intensive training in advanced JavaScript and React, building on prior knowledge of HTML
+                <p>12 weeks of intensive training in advanced JavaScript and React, building on prior knowledge of
+                    HTML
                     and CSS.
                     <!-- , with hands-on projects, practical assessments, and real-world application development focused on responsive, user-friendly interface design. -->
                 </p>

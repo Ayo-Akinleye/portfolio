@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Desktop first development */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -53,6 +54,7 @@ section {
     padding: 2rem 3rem;
     display: flex;
     flex-direction: column;
+    width: 100vw;
 }
 
 /* Header */
@@ -63,7 +65,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 1000;
     background-color: #ffffff;
@@ -101,6 +103,14 @@ header {
     color: var(--base-color);
 }
 
+.menu-button {
+    display: none;
+}
+
+.menu-links {
+    display: none;
+}
+
 
 /* hero section */
 #hero-section {
@@ -116,13 +126,13 @@ header {
 }
 
 #hero-title {
-    font-size: 40px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin: 60px 0px 0px;
 }
 
 .description {
     text-align: center;
-    font-size: 17.6px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     width: 70%;
 }
 
@@ -197,6 +207,7 @@ header {
 #project-section {
     margin-bottom: 2rem;
     gap: 2rem;
+    height: auto;
     color: var(--base-text-color);
 }
 
@@ -204,7 +215,7 @@ header {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
 }
 
 .project-card {
@@ -212,22 +223,26 @@ header {
     flex-direction: column;
     gap: 0.8rem;
     padding: 1rem;
-    border: 1px solid var(--border-line-color);
+    border: 2px solid var(--border-line-color);
     border-radius: 12px;
-    width: 360px;
-    height: 350px;
-    transition: all 0.3s ease;
+    max-width: 360px;
+    height: auto;
+    /* transition: all 0.3s ease; */
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
     border: 2px solid var(--base-color);
-    box-shadow: 0px 8px 16px rgba(96, 112, 255, 0.1);
+    /* box-shadow: 0px 8px 16px rgba(96, 112, 255, 0.1); */
+}
+
+.tools {
+    margin-bottom: 0.5rem;
 }
 
 .tools button {
     padding: 0.35rem 0.6rem;
-    margin-left: 0.5rem;
+    margin-right: 0.35rem;
     background-color: var(--light-base-color);
     color: var(--base-color);
     border: none;
@@ -235,6 +250,26 @@ header {
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
+
+.project-link {
+    display: flex;
+    /* gap: 5rem; */
+    padding-right: 1.3rem;
+    padding-bottom: 1rem;
+    /* margin-top: auto; */
+    justify-content: space-between;
+}
+
+.project-link a {
+    color: var(--text-color-2);
+}
+
+.project-link a:hover {
+    color: var(--base-text-color);
+    text-decoration: underline;
+}
+
+
 
 /* About me section */
 #about-me-section {
@@ -248,8 +283,7 @@ header {
 .all-about {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-
+    gap: 4rem;
 }
 
 .main-about {
@@ -261,8 +295,9 @@ header {
 
 .summary {
     line-height: 1.8;
-    font-size: 17.6px;
-    width: 540px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    /* width: 100%; */
+    /* max-width: 540px; */
     /* margin-right: 1.5rem; */
 }
 
@@ -277,6 +312,7 @@ header {
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+
 }
 
 .tech {
@@ -287,6 +323,8 @@ header {
     padding: 1rem;
     border: 1px solid var(--border-line-color);
     border-radius: 8px;
+    width: 100%;
+    max-width: 235px;
 }
 
 .experience {
@@ -439,4 +477,69 @@ footer .social-logos li {
 
 footer .social-logos li i {
     font-size: 20px;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        font-size: 2rem;
+        color: var(--base-color);
+    }
+
+
+    .menu-links {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        /* height: 60vw; */
+        width: 100vw;
+        top: 4rem;
+        left: 0;
+        padding: 1rem;
+        background-color: var(--base-color);
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-weight: 500;
+    }
+
+    .menu-links li {
+        cursor: pointer;
+    }
+
+    .menu-links li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu-links li a:hover {
+        text-decoration: underline;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .all-projects {
+        grid-template-columns: 1fr;
+    }
+
+    .all-about {
+        flex-direction: column;
+    }
+
+    .summary {
+        max-width: 100%;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
 }
