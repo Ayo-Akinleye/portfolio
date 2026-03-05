@@ -363,9 +363,6 @@ header {
 .summary {
     line-height: 1.8;
     font-size: clamp(0.9rem, 2vw, 1.1rem);
-    /* width: 100%; */
-    /* max-width: 540px; */
-    /* margin-right: 1.5rem; */
 }
 
 .technologies {
@@ -407,7 +404,7 @@ header {
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
-    min-width: 545px;
+    max-width: 545px;
     padding: 1.5rem;
     border-radius: 8px;
     border-left: 4px solid var(--base-color);
@@ -444,15 +441,15 @@ header {
 .education-flex {
     display: flex;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .edu-card {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem;
-    width: 100%;
-    min-width: 450px;
+    padding: 1.5rem;
+    flex: 1;
     background-color: var(--base-color2);
     border: 1px solid var(--border-line-color);
     border-radius: 12px;
